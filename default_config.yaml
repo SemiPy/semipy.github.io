@@ -1,0 +1,48 @@
+USE_LIGHTNING: True
+EPOCHS: 1
+BALANCING_WEIGHT: 0.5
+DEBIASED: False
+SELECTION_THRESHOLD: 0.95
+BATCH_SIZE: 64
+LABELLED_PROPORTION: 0.5
+SAVE_PATH: './saves'
+OPTIMIZER:
+  NAME: 'SGD'
+  PARAMS:
+    lr: 1.0e-3
+    momentum: 0.9
+SCHEDULER: null
+NET: 'resnet18'
+METHOD: 'pseudolabel'
+NUM_WARMUP_EPOCHS: null
+DATA:
+  NAME: null
+  VALIDATION_PROPORTION: null
+  TEST_PROPORTION: null
+  LABELLED_SAMPLES: null
+  UNLABELLED_SAMPLES: null
+  INCLUDE_LABELLED: True
+  USE_EXTRA: False # Used by SVHN dataset
+  SPLITS:
+    TRAIN:
+      PATH: 'data'
+      NAME_UNLABELLED: 'nodata'
+      TRANSFORMS: []
+USE_MULTIGPU: False
+NUM_GPU: null
+MULTIGPU_STRATEGY: null
+EMA: null
+METRICS:
+  VALIDATION:
+    - NAME: Accuracy
+      PARAMS:
+        task: multiclass
+  TEST:
+    - NAME: Accuracy
+      PARAMS:
+        task: multiclass
+EARLYSTOPPING:
+  NAME: VALIDATION/Loss
+  PARAMS:
+    mode: min
+    patience: 10

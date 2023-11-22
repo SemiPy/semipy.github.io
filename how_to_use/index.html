@@ -1,0 +1,1078 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../about/">
+      
+      
+        <link rel="next" href="../tutorial/">
+      
+      
+      <link rel="icon" href="../img/ssl.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+    
+    
+      
+        <title>How to use - SemiPy docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6a10b989.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings1.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-use-semipy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SemiPy docs" class="md-header__button md-logo" aria-label="SemiPy docs" data-md-component="logo">
+      
+  <img src="../img/ssl.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SemiPy docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How to use
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SemiPy docs" class="md-nav__button md-logo" aria-label="SemiPy docs" data-md-component="logo">
+      
+  <img src="../img/ssl.png" alt="logo">
+
+    </a>
+    SemiPy docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    How to use
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    How to use
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    Configuration file
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters-details" class="md-nav__link">
+    DATA parameters details:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics-parameters-details" class="md-nav__link">
+    METRICS parameters details:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#earlystopping-parameters-details" class="md-nav__link">
+    EARLYSTOPPING parameters details:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notebook-usage" class="md-nav__link">
+    Notebook Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-usage" class="md-nav__link">
+    Script usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#without-configuration-file" class="md-nav__link">
+    Without configuration file ?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introductory tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sampler%20tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JointSampler tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semipy_datasets/semipy_datasets_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    semipy.datasets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semipy_methods/semipy_methods_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    semipy.methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semipy_pl/semipy_pl_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    semipy.pl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semipy_models/semipy_models_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    semipy.models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semipy_sampler/semipy_sampler_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    semipy.sampler
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semipy_transforms/semipy_transforms_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    semipy.transforms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semipy_tools/semipy_tools_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    semipy.tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    Configuration file
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters-details" class="md-nav__link">
+    DATA parameters details:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics-parameters-details" class="md-nav__link">
+    METRICS parameters details:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#earlystopping-parameters-details" class="md-nav__link">
+    EARLYSTOPPING parameters details:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notebook-usage" class="md-nav__link">
+    Notebook Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-usage" class="md-nav__link">
+    Script usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#without-configuration-file" class="md-nav__link">
+    Without configuration file ?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="how-to-use-semipy"><div align="center">How to use SemiPy ?</div></h1>
+<div align="center">Description of different ways to use SemiPy</div>
+
+<hr />
+<p>SemiPy has the advantage of being versatile: different ways exist to use the library.</p>
+<h2 id="configuration-file">Configuration file</h2>
+<p>A first simple way to use SemiPy is to write a configuration file that describes all the different parameters that the user can change. <a href="../default_config.yaml">Here</a> you can find the default configuration file used by the library. Below, a list of all parameters and their description. </p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USE_LIGHTNING</td>
+<td>To use PyTorch Lightning or not</td>
+<td>True</td>
+</tr>
+<tr>
+<td>EPOCHS</td>
+<td>Total number of epochs. One epoch is finished when the model has seen all labelled items.</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BALANCING_WEIGHT</td>
+<td>Corresponds to the 'lambda' parameter found in various SSL papers. Allows to weight unlabelled loss compared to labelled one.</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>DEBIASED</td>
+<td>To enable safe SSL via debiased loss (Schmutz et. al)</td>
+<td>False</td>
+</tr>
+<tr>
+<td>SELECTION_THRESHOLD</td>
+<td>Probability threshold for pseudo-labels.</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>BATCH_SIZE</td>
+<td>Size of each batch.</td>
+<td>64</td>
+</tr>
+<tr>
+<td>LABELLED_PROPORTION</td>
+<td>Proportion of labelled items compared to unlabelled ones. Needed for JointSampler</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>SAVE_PATH</td>
+<td>Path to save models at the end of training and best model during training.</td>
+<td>'./saves'</td>
+</tr>
+<tr>
+<td>OPTIMIZER</td>
+<td>Optimizer name and parameters</td>
+<td>NAME: 'SGD'; PARAMS: {lr: 1.0e-3, momentum: 0.9}</td>
+</tr>
+<tr>
+<td>SCHEDULER</td>
+<td>Learning rate scheduler</td>
+<td>null</td>
+</tr>
+<tr>
+<td>NET</td>
+<td>Model to train.</td>
+<td>'resnet18'</td>
+</tr>
+<tr>
+<td>METHOD</td>
+<td>SSL method to use.</td>
+<td>'pseudolabel'</td>
+</tr>
+<tr>
+<td>NUM_WARMUP_EPOCHS</td>
+<td>Number of warmup epochs. Used for PiModel.</td>
+<td>null</td>
+</tr>
+<tr>
+<td><a href="#data-parameters-details">DATA</a></td>
+<td>Data informations</td>
+<td>See default values in <a href="#data-parameters-details">DATA</a> details below</td>
+</tr>
+<tr>
+<td>USE_MULTIGPU</td>
+<td>To enable multi-GPU training.</td>
+<td>False</td>
+</tr>
+<tr>
+<td>NUM_GPU</td>
+<td>Number of used GPU(s).</td>
+<td>null</td>
+</tr>
+<tr>
+<td>MULTIGPU_STRATEGY</td>
+<td>Strategy for multi-GPU training. For now only 'ddp' is supported.</td>
+<td>null</td>
+</tr>
+<tr>
+<td>EMA</td>
+<td>Exponential Moving Average coefficient for EMA on model's parameters.</td>
+<td>null</td>
+</tr>
+<tr>
+<td><a href="#metrics-parameters-details">METRICS</a></td>
+<td>Metrics informations</td>
+<td>See default values in <a href="#metrics-parameters-details">METRICS</a> details below</td>
+</tr>
+<tr>
+<td><a href="#earlystopping-parameters-details">EARLYSTOPPING</a></td>
+<td>EarlyStopping informations</td>
+<td>See default values in <a href="#earlystopping-parameters-details">EARLYSTOPPING</a> details below</td>
+</tr>
+</tbody>
+</table>
+<h5 id="data-parameters-details">DATA parameters details:</h5>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NAME</td>
+<td>Name of the desired dataset. Use 'custom' for your own dataset.</td>
+<td>null</td>
+</tr>
+<tr>
+<td>VALIDATION_PROPORTION</td>
+<td>Size proportion of validation set compared to labelled items.</td>
+<td>null</td>
+</tr>
+<tr>
+<td>TEST_PROPORTION</td>
+<td>(In case current dataset does not have a test set) Size proportion for test set compared to whole dataset.</td>
+<td>null</td>
+</tr>
+<tr>
+<td>LABELLED_SAMPLES</td>
+<td>Number of labelled samples in training set.</td>
+<td>null</td>
+</tr>
+<tr>
+<td>UNLABELLED_SAMPLES</td>
+<td>Number of unlabelled samples in training set.</td>
+<td>null</td>
+</tr>
+<tr>
+<td>INCLUDE_LABELLED</td>
+<td>To include labelled items (without label) in the unlabelled set, to add information.</td>
+<td>True</td>
+</tr>
+<tr>
+<td>USE_EXTRA</td>
+<td>Used by SVHN dataset</td>
+<td>False</td>
+</tr>
+<tr>
+<td>DATA/SPLITS</td>
+<td>Subsection for defining different data splits.</td>
+<td>See below for parameters</td>
+</tr>
+<tr>
+<td>SPLITS/TRAIN</td>
+<td>Subsection example for Train split.</td>
+<td></td>
+</tr>
+<tr>
+<td>SPLITS/PATH</td>
+<td>Path to train set.</td>
+<td>'data'</td>
+</tr>
+<tr>
+<td>SPLITS/NAME_UNLABELLED</td>
+<td>In case using your own dataset : name of folder containing unlabelled items.</td>
+<td>'nodata'</td>
+</tr>
+<tr>
+<td>SPLITS/TRANSFORMS</td>
+<td>To add transformations to the dataset.</td>
+<td>[]</td>
+</tr>
+</tbody>
+</table>
+<h5 id="metrics-parameters-details">METRICS parameters details:</h5>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>METRICS/VALIDATION</td>
+<td>Subsection for validation metrics.</td>
+<td>See below for parameters.</td>
+</tr>
+<tr>
+<td>VALIDATION/NAME</td>
+<td>Name of the first validation metric.</td>
+<td>Accuracy</td>
+</tr>
+<tr>
+<td>VALIDATION/PARAMS</td>
+<td>Parameters for the corresponding metric.</td>
+<td>{task: multiclass}</td>
+</tr>
+<tr>
+<td>METRICS/TEST</td>
+<td>Subsection for test metrics.</td>
+<td>See below for parameters.</td>
+</tr>
+<tr>
+<td>TEST/NAME</td>
+<td>Name of the first test metric.</td>
+<td>Accuracy</td>
+</tr>
+<tr>
+<td>TEST/PARAMS</td>
+<td>Parameters for the corresponding metric.</td>
+<td>{task: multiclass}</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can add as many metrics as you want. Simply add a new item in the list. The names should be took in <a href="https://torchmetrics.readthedocs.io/en/stable/" target="_blank">torchmetrics</a> list of metrics. For example:
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="nt">METRICS</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="nt">VALIDATION</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MulticlassAccuracy</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">              </span><span class="nt">PARAMS</span><span class="p">:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">                </span><span class="nt">num_classes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MulticlassAveragePrecision</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">              </span><span class="nt">PARAMS</span><span class="p">:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">                </span><span class="nt">num_classes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">                </span><span class="nt">average</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;weighted&#39;</span>
+</span></code></pre></div></p>
+</div>
+<h5 id="earlystopping-parameters-details">EARLYSTOPPING parameters details:</h5>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EARLYSTOPPING/NAME</td>
+<td>Name of the monitored metric.</td>
+<td>VALIDATION/Loss</td>
+</tr>
+<tr>
+<td>EARLYSTOPPING/PARAMS</td>
+<td>Dictionary of parameters for EarlyStopping.</td>
+<td>{'mode': 'min', 'patience': 10}</td>
+</tr>
+</tbody>
+</table>
+<p>Once you have your configuration file ready, you have multiple choices: use a notebook or use a script.</p>
+<h3 id="notebook-usage">Notebook Usage</h3>
+<p>If you want to use a notebook, simply feed the configuration file's path to your trainer.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    <span class="kn">import</span> <span class="nn">semipy</span> <span class="k">as</span> <span class="nn">smp</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">trainer</span> <span class="o">=</span> <span class="n">smp</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">SSLTrainer</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s1">&#39;config.yaml&#39;</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    <span class="kn">from</span> <span class="nn">pytorch_lightning</span> <span class="kn">import</span> <span class="n">Trainer</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="kn">import</span> <span class="nn">semipy</span> <span class="k">as</span> <span class="nn">smp</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">trainer</span> <span class="o">=</span> <span class="n">Trainer</span><span class="p">(</span><span class="n">max_epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">accelerator</span><span class="o">=</span><span class="s1">&#39;gpu&#39;</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">lightning_module</span> <span class="o">=</span> <span class="n">smp</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">LitFixMatch</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s1">&#39;config.yaml&#39;</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">lightning_module</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="script-usage">Script usage</h3>
+<p>You can also use a custom script, or use the main.py script present in the root folder of the library. Just use the parser -config "path_to_config_file" option to use your configuration file. </p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">    python main.py --config config.yaml</span>
+</span></code></pre></div>
+<h2 id="without-configuration-file">Without configuration file ?</h2>
+<p>It is stil possible to use SemiPy without a YAML configuration file. You can also use a dictionary of parameters. Note that when building a trainer (with or without PyTorch Lightning), the library will still use the above provided <a href="../default_config.yaml">default configuration file</a> in order to fill in the parameters that have not been specified by the user. For example with a dictionary:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    <span class="kn">import</span> <span class="nn">semipy</span> <span class="k">as</span> <span class="nn">smp</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;EPOCHS&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;BALANCING_WEIGHT&#39;</span><span class="p">:</span> <span class="mf">0.12</span><span class="p">}</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">trainer</span> <span class="o">=</span> <span class="n">smp</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">SSLTrainer</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Finally, if you don't want to use the provided trainers, you have access to all the useful functions that comes with SemiPy, especially the different loss functions specific to each Semi-Supervised learning algorithms (that are written in a PyTorch style), and of course the JointSampler. It's up to you to build your own code with those more in-depth functions. Note that most of the code is Pytorch Lightning compatible, so you can also build your own Lightning Module.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 Lucas Boiteau
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
