@@ -344,21 +344,21 @@
         
           <li class="md-nav__item">
   <a href="#data-parameters-details" class="md-nav__link">
-    DATA parameters details:
+    DATA parameters details
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#metrics-parameters-details" class="md-nav__link">
-    METRICS parameters details:
+    METRICS parameters details
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#earlystopping-parameters-details" class="md-nav__link">
-    EARLYSTOPPING parameters details:
+    EARLYSTOPPING parameters details
   </a>
   
 </li>
@@ -664,21 +664,21 @@
         
           <li class="md-nav__item">
   <a href="#data-parameters-details" class="md-nav__link">
-    DATA parameters details:
+    DATA parameters details
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#metrics-parameters-details" class="md-nav__link">
-    METRICS parameters details:
+    METRICS parameters details
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#earlystopping-parameters-details" class="md-nav__link">
-    EARLYSTOPPING parameters details:
+    EARLYSTOPPING parameters details
   </a>
   
 </li>
@@ -730,7 +730,7 @@
 <hr />
 <p>SemiPy has the advantage of being versatile: different ways exist to use the library.</p>
 <h2 id="configuration-file">Configuration file</h2>
-<p>A first simple way to use SemiPy is to write a configuration file that describes all the different parameters that the user can change. <a href="../default_config.yaml">Here</a> you can find the default configuration file used by the library. Below, a list of all parameters and their description. </p>
+<p>A first simple way to use SemiPy is to write a configuration file that describes all the different parameters that the user can change. <a href="../default_config.yaml">Here</a> you can find the default configuration file used by the library. Below, a list of all parameters and their description.</p>
 <table>
 <thead>
 <tr>
@@ -842,7 +842,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="data-parameters-details">DATA parameters details:</h5>
+<h3 id="data-parameters-details">DATA parameters details</h3>
 <table>
 <thead>
 <tr>
@@ -914,7 +914,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="metrics-parameters-details">METRICS parameters details:</h5>
+<h3 id="metrics-parameters-details">METRICS parameters details</h3>
 <table>
 <thead>
 <tr>
@@ -958,19 +958,19 @@
 </table>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can add as many metrics as you want. Simply add a new item in the list. The names should be took in <a href="https://torchmetrics.readthedocs.io/en/stable/" target="_blank">torchmetrics</a> list of metrics. For example:
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="nt">METRICS</span><span class="p">:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="nt">VALIDATION</span><span class="p">:</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MulticlassAccuracy</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">              </span><span class="nt">PARAMS</span><span class="p">:</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">                </span><span class="nt">num_classes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MulticlassAveragePrecision</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">              </span><span class="nt">PARAMS</span><span class="p">:</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">                </span><span class="nt">num_classes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">                </span><span class="nt">average</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;weighted&#39;</span>
-</span></code></pre></div></p>
+<p>You can add as many metrics as you want. Simply add a new item in the list. The names should be took in <a href="https://torchmetrics.readthedocs.io/en/stable/">torchmetrics</a> list of metrics. For example:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">METRICS</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">VALIDATION</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MulticlassAccuracy</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">          </span><span class="nt">PARAMS</span><span class="p">:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="nt">num_classes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MulticlassAveragePrecision</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">          </span><span class="nt">PARAMS</span><span class="p">:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nt">num_classes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="nt">average</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;weighted&#39;</span>
+</span></code></pre></div>
 </div>
-<h5 id="earlystopping-parameters-details">EARLYSTOPPING parameters details:</h5>
+<h3 id="earlystopping-parameters-details">EARLYSTOPPING parameters details</h3>
 <table>
 <thead>
 <tr>
@@ -995,26 +995,26 @@
 <p>Once you have your configuration file ready, you have multiple choices: use a notebook or use a script.</p>
 <h3 id="notebook-usage">Notebook Usage</h3>
 <p>If you want to use a notebook, simply feed the configuration file's path to your trainer.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    <span class="kn">import</span> <span class="nn">semipy</span> <span class="k">as</span> <span class="nn">smp</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">trainer</span> <span class="o">=</span> <span class="n">smp</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">SSLTrainer</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s1">&#39;config.yaml&#39;</span><span class="p">)</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">semipy</span> <span class="k">as</span> <span class="nn">smp</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">trainer</span> <span class="o">=</span> <span class="n">smp</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">SSLTrainer</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s1">&#39;config.yaml&#39;</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 </span></code></pre></div>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    <span class="kn">from</span> <span class="nn">pytorch_lightning</span> <span class="kn">import</span> <span class="n">Trainer</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="kn">import</span> <span class="nn">semipy</span> <span class="k">as</span> <span class="nn">smp</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">trainer</span> <span class="o">=</span> <span class="n">Trainer</span><span class="p">(</span><span class="n">max_epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">accelerator</span><span class="o">=</span><span class="s1">&#39;gpu&#39;</span><span class="p">)</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">lightning_module</span> <span class="o">=</span> <span class="n">smp</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">LitFixMatch</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s1">&#39;config.yaml&#39;</span><span class="p">)</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">lightning_module</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">pytorch_lightning</span> <span class="kn">import</span> <span class="n">Trainer</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span> <span class="nn">semipy</span> <span class="k">as</span> <span class="nn">smp</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">trainer</span> <span class="o">=</span> <span class="n">Trainer</span><span class="p">(</span><span class="n">max_epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">accelerator</span><span class="o">=</span><span class="s1">&#39;gpu&#39;</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">lightning_module</span> <span class="o">=</span> <span class="n">smp</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">LitFixMatch</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s1">&#39;config.yaml&#39;</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">lightning_module</span><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="script-usage">Script usage</h3>
-<p>You can also use a custom script, or use the main.py script present in the root folder of the library. Just use the parser -config "path_to_config_file" option to use your configuration file. </p>
-<div class="language-console highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">    python main.py --config config.yaml</span>
+<p>You can also use a custom script, or use the main.py script present in the root folder of the library. Just use the parser -config "path_to_config_file" option to use your configuration file.</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">python main.py --config config.yaml</span>
 </span></code></pre></div>
 <h2 id="without-configuration-file">Without configuration file ?</h2>
 <p>It is stil possible to use SemiPy without a YAML configuration file. You can also use a dictionary of parameters. Note that when building a trainer (with or without PyTorch Lightning), the library will still use the above provided <a href="../default_config.yaml">default configuration file</a> in order to fill in the parameters that have not been specified by the user. For example with a dictionary:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    <span class="kn">import</span> <span class="nn">semipy</span> <span class="k">as</span> <span class="nn">smp</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;EPOCHS&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;BALANCING_WEIGHT&#39;</span><span class="p">:</span> <span class="mf">0.12</span><span class="p">}</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">trainer</span> <span class="o">=</span> <span class="n">smp</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">SSLTrainer</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">semipy</span> <span class="k">as</span> <span class="nn">smp</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;EPOCHS&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;BALANCING_WEIGHT&#39;</span><span class="p">:</span> <span class="mf">0.12</span><span class="p">}</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">trainer</span> <span class="o">=</span> <span class="n">smp</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">SSLTrainer</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Finally, if you don't want to use the provided trainers, you have access to all the useful functions that comes with SemiPy, especially the different loss functions specific to each Semi-Supervised learning algorithms (that are written in a PyTorch style), and of course the JointSampler. It's up to you to build your own code with those more in-depth functions. Note that most of the code is Pytorch Lightning compatible, so you can also build your own Lightning Module.</p>
 
