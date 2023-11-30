@@ -565,8 +565,15 @@
 <p class="admonition-title">Warning</p>
 <p>This section is in construction.</p>
 </div>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">semipy</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="n">method_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                                <span class="n">data_config</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="p">]</span>
 </span></code></pre></div>
+<p>This function allows to call the right dataset getter function depending in the asked dataset. It returns a dictionary containing at least the training set, and also the validation and test set if those are asked by the user or already present in the original dataset.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>method_name</strong> (<em><a href="https://docs.python.org/3/library/functions.html#func-str">str</a></em>) - Name of the used SSL method (e.g 'fixmatch').</li>
+<li><strong>data_config</strong> (<em><a href="https://docs.python.org/3/library/functions.html#func-dict">dict</a></em>) - Dictionary of parameters dedicated to data (DATA part of the configuration file).</li>
+</ul>
 
 
 

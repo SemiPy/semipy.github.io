@@ -572,13 +572,13 @@
 <p>Downloads SVHN dataset from torchvision and transforms it into a Semi-Supervised dataset (with labelled and unlabelled samples).</p>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><strong>num_labelled</strong> - number of labelled items to include in the dataset. Default: 73 257</li>
-<li><strong>num_unlabelled</strong> - number of unlabelled items to include in the dataset. Default: 0</li>
-<li><strong>valid_proportion</strong> - size of the validation set defined by a proportion with respect to the number of labelled items. Default: 0.0</li>
-<li><strong>path</strong> - the path to download and store data samples. Default: <code>'./data'</code></li>
-<li><strong>augmentation</strong> - to use augmentation or not when sampling in the dataset</li>
-<li><strong>include_labelled</strong> - to include labelled items into unlabelled set as additional data. Default: False</li>
-<li><strong>use_extra</strong> - to use the 'extra' dataset from SVHN (531 131 samples in addition) or not. Default: False</li>
+<li><strong>num_labelled</strong> (<em><a href="https://docs.python.org/3/library/functions.html#int">int</a></em>) - Number of labelled items to include in the dataset. Default: 73 257</li>
+<li><strong>num_unlabelled</strong> (<em><a href="https://docs.python.org/3/library/functions.html#int">int</a></em>) - Number of unlabelled items to include in the dataset. Default: 0</li>
+<li><strong>valid_proportion</strong> (<em><a href="https://docs.python.org/3/library/functions.html#float">float</a></em>) - Size of the validation set defined by a proportion with respect to the number of labelled items. Default: 0.0</li>
+<li><strong>path</strong> (<em><a href="https://docs.python.org/3/library/functions.html#func-str">str</a></em>) - Path to download and store data samples. Default: <code>'./data'</code></li>
+<li><strong>augmentation</strong> (<em><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></em>) - To use augmentation or not when sampling in the dataset. Default: <code>False</code></li>
+<li><strong>include_labelled</strong> (<em><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></em>) - To include labelled items into unlabelled set as additional data. Default: <code>False</code></li>
+<li><strong>use_extra</strong> (<em><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></em>) - To use the 'extra' dataset from SVHN (531 131 samples in addition) or not. Default: <code>False</code></li>
 </ul>
 
 

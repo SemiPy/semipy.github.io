@@ -571,6 +571,11 @@
 </div>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">semipy</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">build_transforms</span><span class="p">(</span><span class="n">config_transforms</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span>
 </span></code></pre></div>
+<p>This function builds a composition of transformations from a list of transforms configurations. It allows to add in this composition either transformations from <code>torchvision</code> or custom transformations. Thoses custom transformations need to be added in the <code>semipy/transforms</code> directory of SemiPy.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>config_transforms</strong> (<em><a href="https://docs.python.org/3/library/functions.html#func-list">List</a></em>[<em><a href="https://docs.python.org/3/library/functions.html#func-dict">Dict</a></em>[<em><a href="https://docs.python.org/3/library/functions.html#func-str">str</a></em>, <em>Any</em>]]) - List of transformations. Each transformation is a dictionary with first key corresponding to the name of the transformation, and a second key with the corresponding parameters of this transformation.</li>
+</ul>
 
 
 
