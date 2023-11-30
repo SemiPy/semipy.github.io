@@ -575,6 +575,32 @@
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                                           <span class="n">is_valid_file</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">bool</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                                           <span class="p">)</span>
 </span></code></pre></div>
+<p>A class based on torchvision.datasets.DatasetFolder that allows to create an iterable dataset, as DatasetDolfer, from a directory on the user's computer but with the ability to have unlabelled items. The 'find_classes' method has been overridden in order to take into account unlabelled data, and the 'make_dataset' method has been overridden in order to support labelled data inclusion option. The directory should be as the following architecture :</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">directory</span><span class="o">/</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        <span class="err">├──</span> <span class="n">class_x</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="err">│</span>   <span class="err">├──</span> <span class="n">xxx</span><span class="o">.</span><span class="n">jpg</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="err">│</span>   <span class="err">├──</span> <span class="n">xxy</span><span class="o">.</span><span class="n">jpg</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="err">│</span>   <span class="err">└──</span> <span class="o">...</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="err">└──</span> <span class="n">class_y</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            <span class="err">├──</span> <span class="n">img11</span><span class="o">.</span><span class="n">jpg</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            <span class="err">├──</span> <span class="n">img12</span><span class="o">.</span><span class="n">jpg</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            <span class="err">└──</span> <span class="o">...</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="err">└──</span> <span class="n">unlabelled</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            <span class="err">├──</span> <span class="n">no1</span><span class="o">.</span><span class="n">jpg</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            <span class="err">├──</span> <span class="n">no2</span><span class="o">.</span><span class="n">jpg</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            <span class="err">└──</span> <span class="o">...</span>
+</span></code></pre></div>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>root</strong> (<em><a href="https://docs.python.org/3/library/functions.html#func-str">str</a></em>) – Root directory path.</li>
+<li><strong>unlabelled_folder</strong> (<em><a href="https://docs.python.org/3/library/functions.html#func-str">str</a></em>) - Name of the unlabelled items' folder.</li>
+<li><strong>loader</strong> (<em>callable</em>) – A function to load a sample given its path.</li>
+<li><strong>include_labelled</strong> (<em><a href="https://docs.python.org/3/library/functions.html#bool">bool</a></em>) - To include labelled items into the unlabelled set.</li>
+<li><strong>extensions</strong> (<em><a href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a></em>[<em><a href="https://docs.python.org/3/library/functions.html#func-str">str</a></em>]) – A list of allowed extensions. Both extensions and is_valid_file should not be passed.</li>
+<li><strong>transform</strong> (<em>callable, optional</em>) – A function/transform that takes in a sample and returns a transformed version. E.g, <code>transforms.RandomCrop</code> for images.</li>
+<li><strong>target_transform</strong> (<em>callable, optional</em>) – A function/transform that takes in the target and transforms it.</li>
+<li><strong>is_valid_file</strong> - A function that takes path of a file and check if the file is a valid file (used to check of corrupt files) both extensions and is_valid_file should not be passed.</li>
+</ul>
 
 
 

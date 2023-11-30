@@ -567,8 +567,17 @@
 </div>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">SSLDataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                                     <span class="n">weak_transform</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                                     <span class="n">strong_transform</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                                     <span class="n">strong_transform</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                                     <span class="n">num_classes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 </span></code></pre></div>
+<p>A class based on the abstract torch.utils.data.Dataset class. It has the ability to apply two different data transformations lists (usually a strong and a weak data augmentation in SSL case). It returns a tuple of size 2 or 3, depending if the user asked a second augmentation list or not.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>dataset</strong> - An iterable dataset.</li>
+<li><strong>weak_transform</strong> - A first <code>torchvision.transforms.Compose</code> list of data transformations.</li>
+<li><strong>strong_transform</strong> - A second <code>torchvision.transforms.Compose</code> list of data transformations. Default: None</li>
+<li><strong>num_classes</strong> (<a href="https://docs.python.org/3/library/functions.html#int">int</a>) - Number of classes in the 'dataset' parameter. Default: None</li>
+</ul>
 
 
 
