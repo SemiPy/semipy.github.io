@@ -567,6 +567,16 @@
 </div>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">semipy</span><span class="o">.</span><span class="n">methods</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">pseudolabel_loss</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">lbda</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">debiased</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </span></code></pre></div>
+<p>This function computes the labelled/unlabelled loss with respect to <a href='https://scholar.google.com/citations?view_op=view_citation&hl=fr&user=Iw-G2qIAAAAJ&citation_for_view=Iw-G2qIAAAAJ:u5HHmVD_uO8C' target='_blank'>PseudoLabel</a> method.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>model</strong> - The model to train.</li>
+<li><strong>X</strong> - A <code>torch.tensor</code> representing one batch of data (both labelled and unlabelled).</li>
+<li><strong>y</strong> - A <code>torch.tensor</code> representing the labels of the current batch (unlabelled are labelled as -1).</li>
+<li><strong>lbda</strong> (<em><a href='https://docs.python.org/3/library/functions.html#float' target='_blank'>float</a></em>) - Balancing weight for unlabelled loss.</li>
+<li><strong>threshold</strong> (<em><a href='https://docs.python.org/3/library/functions.html#float' target='_blank'>float</a></em>) - Probability threshold for pseudo-labelling.</li>
+<li><strong>debiased</strong> (<em><a href='https://docs.python.org/3/library/functions.html#bool' target='_blank'>bool</a></em>) - To activate or not <a href='https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hvxFtLsAAAAJ&citation_for_view=hvxFtLsAAAAJ:2osOgNQ5qMEC' target='_blank'>safe-SSL</a> (Schmutz et al.) via debiasing. Default: <code>False</code></li>
+</ul>
 
 
 

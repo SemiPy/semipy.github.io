@@ -569,6 +569,13 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                                             <span class="n">patience</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                                             <span class="n">min_delta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </span></code></pre></div>
+<p>This class is useful to add Early Stopping without using PyTorch Lightning.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>monitor</strong> (<em><a href='https://docs.python.org/3/library/functions.html#func-str' target='_blank'>str</a></em>) - The metric to monitor. Default: 'VALIDATION/Loss'</li>
+<li><strong>patience</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) - Number of events to wait if no improvement and then stop the training. Default: 3</li>
+<li><strong>min_delta</strong> (<em><a href='https://docs.python.org/3/library/functions.html#float' target='_blank'>float</a></em>) - A minimum increase in the score to qualify as an improvement, i.e. an increase of less than or equal to min_delta, will count as no improvement. Default: 0.0</li>
+</ul>
 
 
 

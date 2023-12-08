@@ -16,7 +16,7 @@
     
     
       
-        <title>semipy.methods.utils.EMA - SemiPy docs</title>
+        <title>semipy.methods.utils.DistAlign - SemiPy docs</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#semipymethodsutilsema" class="md-skip">
+        <a href="#semipymethodsutilsdistalign" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              semipy.methods.utils.EMA
+              semipy.methods.utils.DistAlign
             
           </span>
         </div>
@@ -560,19 +560,27 @@
                   
 
 
-<h1 id="semipymethodsutilsema">semipy.methods.utils.EMA</h1>
+<h1 id="semipymethodsutilsdistalign">semipy.methods.utils.DistAlign</h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This section is in construction.</p>
 </div>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">methods</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">EMA</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">decay</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">methods</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">DistAlign</span><span class="p">(</span><span class="n">num_classes</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                                         <span class="n">momentum</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                                         <span class="n">buffer_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">128</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                                         <span class="n">distributed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                         <span class="n">module</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                                         <span class="n">lightning_module</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </span></code></pre></div>
-<p>This EMA class stores a model, EMA decay and has methods to update and transfer parameters from the training model to an EMA model.</p>
+<p>This class performs Distribution Alignment. Originally performed in <a href='https://arxiv.org/abs/1911.09785' target='_blank'>ReMixMatch</a> (Berthelot et al., 2020) (See 3.1.2). This version is modified for AdaMatch where the labelled distribution is estimated from the output of the model rather than from the true labels, as implemented <a href='https://github.com/google-research/adamatch/blob/main/semi_supervised/adamatch.py#L59' target='_blank'>here</a>.</p>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><strong>model</strong> - The training model.</li>
-<li><strong>decay</strong> (<em><a href='https://docs.python.org/3/library/functions.html#float' target='_blank'>float</a></em>) - EMA decay.</li>
-<li><strong>device</strong> (<em><a href='https://docs.python.org/3/library/functions.html#func-str' target='_blank'>str</a></em>) - Device to use. It should be the same as the training device. Default: 'cpu'</li>
+<li><strong>num_classes</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) - Number of classes in the used dataset.</li>
+<li><strong>momentum</strong> (<em><a href='https://docs.python.org/3/library/functions.html#float' target='_blank'>float</a></em>) - EMA decay for updating labelled probabilities.</li>
+<li><strong>buffer_size</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) - Size of the sliding window. Default: 128</li>
+<li><strong>distributed</strong> (<em><a href='https://docs.python.org/3/library/functions.html#bool' target='_blank'>bool</a></em>) - Set to <code>True</code> if using multi-GPU training. Default: <code>False</code></li>
+<li><strong>module</strong> - A semipy.method.abstractMethod based module for the used method (for example semipy.method.FixMatch) (Use only if not using PyTorch Lightning).</li>
+<li><strong>lightning_module</strong> - A PyTorch Lightning module. Use only when using PyTorch Lightning.</li>
 </ul>
 
 

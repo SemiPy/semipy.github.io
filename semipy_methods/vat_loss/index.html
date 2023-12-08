@@ -16,7 +16,7 @@
     
     
       
-        <title>semipy.methods.utils.EMA - SemiPy docs</title>
+        <title>semipy.methods.utils.vat_loss - SemiPy docs</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#semipymethodsutilsema" class="md-skip">
+        <a href="#semipymethodsutilsvat_loss" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              semipy.methods.utils.EMA
+              semipy.methods.utils.vat_loss
             
           </span>
         </div>
@@ -560,19 +560,21 @@
                   
 
 
-<h1 id="semipymethodsutilsema">semipy.methods.utils.EMA</h1>
+<h1 id="semipymethodsutilsvat_loss">semipy.methods.utils.vat_loss</h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This section is in construction.</p>
 </div>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">methods</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">EMA</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">decay</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+<p><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">semipy</span><span class="o">.</span><span class="n">methods</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">vat_loss</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">weak_x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">lbda</span><span class="p">,</span> <span class="n">debiased</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </span></code></pre></div>
-<p>This EMA class stores a model, EMA decay and has methods to update and transfer parameters from the training model to an EMA model.</p>
+This function computes the labelled/unlabelled loss with respect to <a href='https://arxiv.org/abs/1704.03976' target='_blank'>VAT</a> method.</p>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><strong>model</strong> - The training model.</li>
-<li><strong>decay</strong> (<em><a href='https://docs.python.org/3/library/functions.html#float' target='_blank'>float</a></em>) - EMA decay.</li>
-<li><strong>device</strong> (<em><a href='https://docs.python.org/3/library/functions.html#func-str' target='_blank'>str</a></em>) - Device to use. It should be the same as the training device. Default: 'cpu'</li>
+<li><strong>model</strong> - The model to train.</li>
+<li><strong>weak_x</strong> - A <code>torch.tensor</code> representing one batch of weakly augmented data (both labelled and unlabelled).</li>
+<li><strong>y</strong> - A <code>torch.tensor</code> representing the labels of the current batch (unlabelled are labelled as -1).</li>
+<li><strong>lbda</strong> (<em><a href='https://docs.python.org/3/library/functions.html#float' target='_blank'>float</a></em>) - Balancing weight for unlabelled loss.</li>
+<li><strong>debiased</strong> (<em><a href='https://docs.python.org/3/library/functions.html#bool' target='_blank'>bool</a></em>) - To activate or not <a href='https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hvxFtLsAAAAJ&citation_for_view=hvxFtLsAAAAJ:2osOgNQ5qMEC' target='_blank'>safe-SSL</a> (Schmutz et al.) via debiasing. Default: <code>False</code></li>
 </ul>
 
 

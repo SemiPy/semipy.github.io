@@ -571,6 +571,14 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                                     <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cpu&#39;</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                     <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </span></code></pre></div>
+<p>This function loads and reads a custom metrics YAML file. It returns a nn.ModuleDict of MetricsCollection.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>config</strong> - Either a dict, AttributeDict or a path to a config file.</li>
+<li><strong>num_validation_loaders</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) - Number of validation dataloaders in case using multiple validation sets. Default: 1</li>
+<li><strong>num_test_loaders</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) - Number of test dataloaders in case using multiple test sets. Default: 1</li>
+<li><strong>device</strong> (<em><a href='https://docs.python.org/3/library/functions.html#func-str' target='_blank'>str</a></em>) - The device used during training. Default: 'cpu'</li>
+</ul>
 
 
 

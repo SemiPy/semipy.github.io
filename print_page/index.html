@@ -2263,27 +2263,35 @@ tensor([15, 11], dtype=torch.int32)
 </tr>
 <tr>
 <td><a href="#semipy_methods-complete_case">semipy.methods.CompleteCase</a></td>
-<td></td>
+<td>Applies complete case.</td>
 </tr>
 <tr>
 <td><a href="#semipy_methods-pseudolabel">semipy.methods.PseudoLabel</a></td>
-<td></td>
+<td>Applies <a href='https://scholar.google.com/citations?view_op=view_citation&hl=fr&user=Iw-G2qIAAAAJ&citation_for_view=Iw-G2qIAAAAJ:u5HHmVD_uO8C' target='_blank'>PseudoLabel</a> method.</td>
 </tr>
 <tr>
 <td><a href="#semipy_methods-fixmatch">semipy.methods.FixMatch</a></td>
-<td></td>
+<td>Applies <a href='https://arxiv.org/abs/2001.07685' target='_blank'>FixMatch</a> method.</td>
 </tr>
 <tr>
 <td><a href="#semipy_methods-pimodel">semipy.methods.PiModel</a></td>
-<td></td>
+<td>Applies <a href='https://arxiv.org/abs/1610.02242' target='_blank'>PiModel</a> method.</td>
 </tr>
 <tr>
 <td><a href="#semipy_methods-vat">semipy.methods.VAT</a></td>
-<td></td>
+<td>Applies <a href='https://arxiv.org/abs/1704.03976' target='_blank'>VAT</a> method.</td>
+</tr>
+<tr>
+<td><a href="#semipy_methods-adamatch">semipy.methods.AdaMatch</a></td>
+<td>Applies <a href='https://arxiv.org/abs/2106.04732' target='_blank'>AdaMatch</a> metehod.</td>
 </tr>
 <tr>
 <td><a href="#semipy_methods-ema">semipy.methods.utils.EMA</a></td>
 <td>For using Exponential Moving Average on validation model's parameters.</td>
+</tr>
+<tr>
+<td><a href="#semipy_methods-distalign">semipy.methods.utils.DistAlign</a></td>
+<td>To perform Distribution Alignment.</td>
 </tr>
 <tr>
 <td><a href="#semipy_methods-earlystopping">semipy.methods.utils.EarlyStopping</a></td>
@@ -2305,12 +2313,24 @@ tensor([15, 11], dtype=torch.int32)
 <td>Reads a metrics YAML file and outputs a dicitonary of metrics.</td>
 </tr>
 <tr>
-<td><a href="#semipy_methods-pseudolabel_loss">semipy.methods.utils.pseudolabel_loss</a></td>
-<td></td>
+<td><a href="#semipy_methods-pseudolabel_loss">semipy.methods.functional.pseudolabel_loss</a></td>
+<td>To compute <a href='https://scholar.google.com/citations?view_op=view_citation&hl=fr&user=Iw-G2qIAAAAJ&citation_for_view=Iw-G2qIAAAAJ:u5HHmVD_uO8C' target='_blank'>PseudoLabel</a> loss.</td>
 </tr>
 <tr>
-<td><a href="#semipy_methods-fixmatch_loss">semipy.methods.utils.fixmatch_loss</a></td>
-<td></td>
+<td><a href="#semipy_methods-fixmatch_loss">semipy.methods.functional.fixmatch_loss</a></td>
+<td>To compute <a href='https://arxiv.org/abs/2001.07685' target='_blank'>FixMatch</a> loss.</td>
+</tr>
+<tr>
+<td><a href="#semipy_methods-pimodel_loss">semipy.methods.functional.pimodel_loss</a></td>
+<td>To compute <a href='https://arxiv.org/abs/1610.02242' target='_blank'>PiModel</a> loss.</td>
+</tr>
+<tr>
+<td><a href="#semipy_methods-vat_loss">semipy.methods.functional.vat_loss</a></td>
+<td>To compute <a href='https://arxiv.org/abs/1704.03976' target='_blank'>VAT</a> loss.</td>
+</tr>
+<tr>
+<td><a href="#semipy_methods-adamatch_loss">semipy.methods.functional.adamatch_loss</a></td>
+<td>To compute <a href='https://arxiv.org/abs/2106.04732' target='_blank'>AdaMatch</a> loss.</td>
 </tr>
 </tbody>
 </table></section><section class="print-page" id="semipy_pl-semipy_pl_index"><h1 id="semipy_pl-semipy_pl_index-semipypl">semipy.pl</h1>
@@ -2333,19 +2353,23 @@ tensor([15, 11], dtype=torch.int32)
 </tr>
 <tr>
 <td><a href="#semipy_pl-lit_pseudolabel">semipy.pl.LitPseudoLabel</a></td>
-<td>To use PseudoLabel method with PyTorch Lightning.</td>
+<td>To use <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=fr&amp;user=Iw-G2qIAAAAJ&amp;citation_for_view=Iw-G2qIAAAAJ:u5HHmVD_uO8C">PseudoLabel</a> method with PyTorch Lightning.</td>
 </tr>
 <tr>
 <td><a href="#semipy_pl-lit_fixmatch">semipy.pl.LitFixMatch</a></td>
-<td>To use FixMatch method with PyTorch Lightning.</td>
+<td>To use <a href="https://arxiv.org/abs/2001.07685">FixMatch</a> method with PyTorch Lightning.</td>
 </tr>
 <tr>
 <td><a href="#semipy_pl-lit_pimodel">semipy.pl.LitPiModel</a></td>
-<td>To use PiModel method with PyTorch Lightning.</td>
+<td>To use <a href="https://arxiv.org/abs/1610.02242">PiModel</a> method with PyTorch Lightning.</td>
 </tr>
 <tr>
 <td><a href="#semipy_pl-lit_vat">semipy.pl.LitVAT</a></td>
-<td>To use VAT method with PyTorch Lightning.</td>
+<td>To use <a href="https://arxiv.org/abs/1704.03976">VAT</a> method with PyTorch Lightning.</td>
+</tr>
+<tr>
+<td><a href="#semipy_pl-lit_adamatch">semipy.pl.LitAdaMatch</a></td>
+<td>To use <a href="https://arxiv.org/abs/2106.04732">AdaMatch</a> method with PyTorch Lightning.</td>
 </tr>
 </tbody>
 </table></section><section class="print-page" id="semipy_models-semipy_models_index"><h1 id="semipy_models-semipy_models_index-semipymodels">semipy.models</h1>

@@ -16,7 +16,7 @@
     
     
       
-        <title>semipy.methods.utils.EMA - SemiPy docs</title>
+        <title>semipy.pl.LitAdaMatch - SemiPy docs</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#semipymethodsutilsema" class="md-skip">
+        <a href="#semipypllitadamatch" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              semipy.methods.utils.EMA
+              semipy.pl.LitAdaMatch
             
           </span>
         </div>
@@ -406,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semipy_methods_index/" class="md-nav__link">
+      <a href="../../semipy_methods/semipy_methods_index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -426,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../semipy_pl/semipy_pl_index/" class="md-nav__link">
+      <a href="../semipy_pl_index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -560,19 +560,17 @@
                   
 
 
-<h1 id="semipymethodsutilsema">semipy.methods.utils.EMA</h1>
+<h1 id="semipypllitadamatch">semipy.pl.LitAdaMatch</h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This section is in construction.</p>
 </div>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">methods</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">EMA</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">decay</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">LitAdaMatch</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </span></code></pre></div>
-<p>This EMA class stores a model, EMA decay and has methods to update and transfer parameters from the training model to an EMA model.</p>
+<p>This class allows user to train a model with <a href='https://arxiv.org/abs/2106.04732' target='_blank'>AdaMatch</a> method and <a href='https://www.pytorchlightning.ai/index.html' target='_blank'>PyTorch Lightning</a>.</p>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><strong>model</strong> - The training model.</li>
-<li><strong>decay</strong> (<em><a href='https://docs.python.org/3/library/functions.html#float' target='_blank'>float</a></em>) - EMA decay.</li>
-<li><strong>device</strong> (<em><a href='https://docs.python.org/3/library/functions.html#func-str' target='_blank'>str</a></em>) - Device to use. It should be the same as the training device. Default: 'cpu'</li>
+<li><strong>config</strong> (<em><a href='https://docs.python.org/3/library/functions.html#func-dict' target='_blank'>dict</a></em>, <em><a href='https://docs.python.org/3/library/functions.html#func-str' target='_blank'>str</a></em>) - Dictionary of parameters. To have a complete dictionary, use <code>semipy.tools.get_config</code>. If using a string, it should correspond to a path to a configuration YAML file.</li>
 </ul>
 
 

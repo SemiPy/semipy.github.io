@@ -567,6 +567,17 @@
 </div>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">methods</span><span class="o">.</span><span class="n">VAT</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">dataloader</span><span class="p">,</span> <span class="n">val_dataloaders</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">)</span>
 </span></code></pre></div>
+<p>This class applies <a href='https://arxiv.org/abs/1704.03976' target='_blank'>VAT</a> (Miyato et al.) method.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>args</strong> (<em><a href='https://docs.python.org/3/library/functions.html#func-dict' target='_blank'>dict</a></em>) - Dictionary of parameters. To have a complete dictionary, use <code>semipy.tools.get_config</code>.</li>
+<li><strong>model</strong> - Model to train. It can be a model from <code class="language-python highlight"><span class="n">torchvision</span><span class="o">.</span><span class="n">models</span></code> or a custom PyTorch model.</li>
+<li><strong>dataloader</strong> (<em><a href='https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader' target='_blank'>torch.utils.data.DataLoader</a></em>) - Dataloader for training. It should use the provided <code>semipy.sampler.JointSampler</code> (or <code>DistributedJointSampler</code>) sampler.</li>
+<li><strong>val_dataloader</strong> (<em><a href='https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader' target='_blank'>torch.utils.data.DataLoader</a></em>) - Dataloader for validation.</li>
+<li><strong>optimizer</strong> (<em><a href='https://pytorch.org/docs/stable/optim.html#torch.optim.Optimizer' target='_blank'>torch.optim.Optimizer</a></em>) - Optimization algorithm.</li>
+<li><strong>scheduler</strong> (<em><a href='https://pytorch.org/docs/stable/_modules/torch/optim/lr_scheduler.html#LRScheduler' target='_blank'>torch.optim.lr_scheduler.LRScheduler</a></em>, <em>optional</em>) - Learning rate scheduler.</li>
+<li><strong>num_classes</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) - Number of classes in the dataset.</li>
+</ul>
 
 
 
