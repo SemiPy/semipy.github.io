@@ -547,6 +547,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -565,8 +580,25 @@
 <p class="admonition-title">Warning</p>
 <p>This section is in construction.</p>
 </div>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">SSLTrainer</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">SSLTrainer</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">],</span> <span class="n">model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rank</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">world_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </span></code></pre></div>
+<p>This class is a trainer for SSL without using PyTorch Lightning. It creates an environment for training a model with SSL by downloading the data, convert it into an SSL dataset if needed, download a model, a scheduler, an optimizer, create dataloader, etc. It's a simple way to discover SemiPy for newcomers.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>config</strong> (<em><a href='https://docs.python.org/3/library/functions.html#func-str' target='_blank'>str</a></em> or <em><a href='https://docs.python.org/3/library/functions.html#func-dict' target='_blank'>dict</a></em>) - A path to a configuration file and a dictionary containing the needed (and wanted) parameters.</li>
+<li><strong>model</strong>- A model to train. It can be a custom one. Default: <code>None</code>.</li>
+<li><strong>rank</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>, <em>optional</em>) - Rank of the current process within <code>num_replicas</code>. Default: <code>None</code></li>
+<li>
+<p><strong>world_size</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>, <em>optional</em>) - In distributed mode, total number of GPUs. Default: <code>None</code></p>
+<h3 id="methods">Methods</h3>
+<div class="language-text highlight"><pre><span></span><code>```
+    fit()
+```
+
+Launches the training of the model with the right parameters and model.
+</code></pre></div>
+</li>
+</ul>
 
 
 

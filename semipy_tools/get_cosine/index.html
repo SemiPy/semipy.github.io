@@ -571,6 +571,15 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                                    <span class="n">num_cycles</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                    <span class="n">last_epoch</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">lr_scheduler</span><span class="o">.</span><span class="n">LambdaLR</span>
 </span></code></pre></div>
+<p>Creates a schedule with a learning rate that decreases following the values of the cosine function between the initial learning rate set in the optimizer to 0, after a warmup period during which it increases linearly between 0 and the initial learning rate set in the optimizer.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>optimizer</strong> (<em><a href='https://pytorch.org/docs/stable/optim.html#torch.optim.Optimizer' target='_blank'>torch.optim.Optimizer</a></em>) - The optimizer for which to schedule the learning rate.</li>
+<li><strong>num_warmup_steps</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) - Number of steps for warmup during which the learning rate increases linearly between 0 and the initial learning rate set in the optimizer.</li>
+<li><strong>num_training_steps</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) -  The total number of training steps.</li>
+<li><strong>num_cycles</strong> (<em><a href='https://docs.python.org/3/library/functions.html#float' target='_blank'>float</a></em>) - The number of waves in the cosine schedule (the default is to just decrease from the max value to 0 following a half-cosine). Default: 0.5.</li>
+<li><strong>last_epoch</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) - The index of the last epoch when resuming training. Default: -1.</li>
+</ul>
 
 
 

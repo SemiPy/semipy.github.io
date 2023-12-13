@@ -567,6 +567,18 @@
 </div>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">DistributedJointSampler</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">proportion</span><span class="p">)</span>
 </span></code></pre></div>
+<p>This class is the distributed version of <a href="../joint_sampler/">semipy.sampler.JointSampler</a>. It has to be used while training with multi-GPU instead of <code>JointSampler</code>. It is based on the <code>DistributedSampler</code> from <code>torch</code>.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>dataset</strong> - A map-style dataset containing labelled and unlabelled data. Unlabelled data must be attached with a -1 label.</li>
+<li><strong>batch_size</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) - Size of batches for labelled data.</li>
+<li><strong>proportion</strong> (<em><a href='https://docs.python.org/3/library/functions.html#float' target='_blank'>float</a></em>) - Proportion of labelled/unlabelled data to use at each batch.</li>
+<li><strong>num_replicas</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>, <em>optional</em>) - Number of processes participating in distributed training. By default, <code>world_size</code> is retrieved from the current distributed group. Default = <code>None</code></li>
+<li><strong>rank</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>, <em>optional</em>) - Rank of the current process within <code>num_replicas</code>. By default, <code>rank</code> is retrieved from the current distributed group. Default: <code>None</code></li>
+<li><strong>shuffle</strong> (<em><a href='https://docs.python.org/3/library/functions.html#bool' target='_blank'>bool</a></em>) -  If True, sampler will shuffle the indices when arriving at the end of either labelled set or unlabelled set. Default: True</li>
+<li><strong>seed</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) - Random seed used to shuffle the sampler if <code>shuffle=True</code>. This number should be identical across all processes in the distributed group. Default: 0.</li>
+<li><strong>drop_last</strong> (<em><a href='https://docs.python.org/3/library/functions.html#bool' target='_blank'>bool</a></em>) - If <code>True</code>, then the sampler will drop the tail of the data to make it evenly divisible across the number of replicas. If <code>False</code>, the sampler will add extra indices to make the data evenly divisible across the replicas. Default: False.</li>
+</ul>
 
 
 

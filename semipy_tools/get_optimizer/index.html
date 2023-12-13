@@ -567,6 +567,12 @@
 </div>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">semipy</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">get_optimizer</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Optimizer</span>
 </span></code></pre></div>
+<p>Get optimizer from PyTorch. This function reads a dictionary of parameters and returns the asked optimizer with the right parameters. If no parameters are given in the dictionary, default values from PyTorch are used.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>args</strong> (<em><a href='https://docs.python.org/3/library/functions.html#func-dict' target='_blank'>dict</a></em>) - A dictionary containing optimizer parameters.</li>
+<li><strong>model</strong> - A PyTorch based model to train.</li>
+</ul>
 
 
 

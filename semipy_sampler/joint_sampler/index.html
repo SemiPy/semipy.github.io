@@ -567,6 +567,13 @@
 </div>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="k">class</span> <span class="nc">semipy</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">JointSampler</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">proportion</span><span class="p">)</span>
 </span></code></pre></div>
+<p>This is a custom sampler made for Semi-Supervised Learning. It allows to sample both labelled and unlabelled items with respect to a ratio between labelled and unlabelled data and by using only one dataset containing both data types. The only condition to respect is to attach a label -1 to unlabelled items. It returns an iterator of batches (lists) of both labelled and unlabelled data's indices, with respect to the specified proportion and batch size.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>dataset</strong> - A map-style dataset containing labelled and unlabelled data. Unlabelled data must be attached with a -1 label.</li>
+<li><strong>batch_size</strong> (<em><a href='https://docs.python.org/3/library/functions.html#int' target='_blank'>int</a></em>) - Size of batches for labelled data.</li>
+<li><strong>proportion</strong> (<em><a href='https://docs.python.org/3/library/functions.html#float' target='_blank'>float</a></em>) - Proportion of labelled/unlabelled data to use at each batch.</li>
+</ul>
 
 
 

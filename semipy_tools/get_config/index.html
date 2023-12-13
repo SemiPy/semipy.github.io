@@ -565,8 +565,13 @@
 <p class="admonition-title">Warning</p>
 <p>This section is in construction.</p>
 </div>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">semipy</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">get_config</span><span class="p">(</span><span class="n">config_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">semipy</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">get_config</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span>
 </span></code></pre></div>
+<p>A function to get parameters from a yaml file. If no file is given, a default config file will be used. Returns a dictionary of parameters.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>config_path</strong> (<em><a href='https://docs.python.org/3/library/functions.html#func-str' target='_blank'>str</a></em> or <em><a href='https://docs.python.org/3/library/functions.html#func-dict' target='_blank'>dict</a></em>) - Path to a config file in the yaml format or dictionary of parameters. Default: <code>None</code></li>
+</ul>
 
 
 
