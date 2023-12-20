@@ -1,0 +1,43 @@
+EPOCHS: 25
+BALANCING_WEIGHT: 0.5
+DEBIASED: False
+SELECTION_THRESHOLD: 0.95
+BATCH_SIZE: 64
+LABELLED_PROPORTION: 0.5
+SAVE_PATH: './saves'
+OPTIMIZER:
+  NAME: 'SGD'
+  PARAMS:
+    lr: 1.0e-3
+    momentum: 0.9
+SCHEDULER: 'get_cosine_schedule_with_warmup'
+NET: 'resnet18'
+METHOD: 'fixmatch'
+NUM_WARMUP_EPOCHS: null
+DATA:
+  NAME: 'pathmnist'
+  VALIDATION_PROPORTION: null
+  TEST_PROPORTION: null
+  LABELLED_SAMPLES: 6000
+  UNLABELLED_SAMPLES: null
+  INCLUDE_LABELLED: True
+  SPLITS:
+    TRAIN:
+      PATH: 'data'
+      NAME_UNLABELLED: 'nodata'
+MULTIGPU: null
+EMA: 0.999
+METRICS:
+  VALIDATION:
+    - NAME: Accuracy
+      PARAMS:
+        task: multiclass
+  TEST:
+    - NAME: Accuracy
+      PARAMS:
+        task: multiclass
+EARLYSTOPPING:
+  NAME: VALIDATION/Loss
+  PARAMS:
+    mode: min
+    patience: 100
